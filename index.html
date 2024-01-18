@@ -1,1 +1,36 @@
-<h1>Hello world</h1>
+<h1>GPG COMMANDS</h1>
+<p>gpg --list-secret-key --keyid-form LONG</p>
+<p>gpg --full-generate-key</p>
+OBS: nome é exatamente o nome que possuo no github (Kassi Pegoraro)
+<p>gpg --armor --export numero_da_chave</p>
+OBS: add key no github
+
+<p>git config --global user.signingkey F727971FC22426D7</p>
+<p>export GPG_TTY=$(tty)</p>
+ 
+
+Assinar todos os commits com GPG
+git config --global commit.gpgsign true
+git config --global tag.gpgSign true
+
+git commit -S -m "message"
+
+git log --show-signature -1
+
+
+Adicionar mais de um e-mail
+gpg --edit-key 0x0000000000000000000000000000000000000000
+    adduid
+    name
+    e-mail
+    uid 2
+    trust
+    5
+    save
+
+Protegendo Branches
+-> Trocar branch padrão para develop no GitHub
+-> Adicionar as regras na branch
+
+Pull request (revisao)
+
